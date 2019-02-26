@@ -1,7 +1,0 @@
-number = digit+ ("." digit+)?
-string = '"' char* '"'
-param = "(" (var ("," var)* )? ")"
-expr = "(" expr+ ")"
-     | var
-     | var "=" expr
-     | "for" var param expr
