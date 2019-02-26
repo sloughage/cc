@@ -1,0 +1,45 @@
+for list (x, i) print(x * i)
+list.for((x, i) print(x * i))
+for x, i : list print(x * i)
+for x, i in list print(x * i)
+
+fib (n) (
+    a = 0
+    b = 1
+    while n > 0 (
+        a, b = b, a + b
+        n -= 1
+    )
+    return a
+)
+
+
+fib = n ->
+    a, b, i ->
+        if i == 0 a
+        else _ b, a + b, i - 1
+    _ 0, 1, n
+
+fib = n : [0, 1 .. _-1 + _-2].(n)
+
+fib (n) (
+    (a, b, i) (
+        if i == 0 return a
+        else return _(b, a + b, i - 1)
+    ) (0, 1, n)
+)
+
+fib (n) (
+    (a b i) (
+        if i==0 a
+        else _(b a+b i-1)
+    ) (0 1 n)
+)
+
+lexer (file) (
+    tokens = []
+    stack = ""
+    text = fs.read(file).for((char) (
+
+
+)

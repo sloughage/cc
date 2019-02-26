@@ -1,0 +1,50 @@
+mergesort x ->
+    if #x < 2 <- x
+    m = #x \ 2
+    l = _ x[..m-1]
+    r = _ x[m..]
+    <- x for _ =
+        !l ? r - 0
+        !r ? l - 0
+        l.0 <= r.0 ? l - 0
+        r - 0
+
+mergesort (x)
+    if #x < 2 <- x
+    m = #x \ 2
+    l = _(x[..m-1])
+    r = _(x[m..])
+    <- for x
+        _ = !l ? r.pop(0)
+            !r ? l.pop(0)
+            l.0 <= r.0 ? l.pop(0)
+            r.pop(0)
+
+fib n ->
+    _ a b i ->
+        <- i < 2 ? i
+        _ b a+b i-1
+    _ 0 1 n
+
+fib (n) (
+    (a, b, i) (
+        i < 2 ? i
+        _(b, a+b, i-1)
+    ) (0, 1, n)
+)
+
+
+x for
+    _ = !l ? r.pop()
+        !r ? l.pop()
+        l.0 <= r.0 ? l.pop()
+        r.pop()
+
+mergesort (x) (
+    if x.size < 2 -> x
+
+
+
+)
+
+in function
