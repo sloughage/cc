@@ -1,10 +1,10 @@
 const fs = require("fs")
 const parse = require("csv-parse")
 
+// Get costs from .csv given college name
 // college name -> cost object
 // string -> {in_state: float, out_state: float, rab: float} || null
 module.exports = async college => {
-    console.log(__filename)
     const stream = fs.createReadStream("./api/database/college_costs.csv")
         .pipe(parse())
 
@@ -21,5 +21,6 @@ module.exports = async college => {
         }
         line++
     }
+
     return data
 }
