@@ -1,5 +1,7 @@
 const test = require("./reqTest")
 
+module.exports = null
+
 test(
     "college name is required",
     "/",

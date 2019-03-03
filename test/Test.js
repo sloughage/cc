@@ -93,7 +93,7 @@ module.exports = class {
                     break
             }
         }
-        if (!c) console.log(this.mod_name + ":", "\x1b[32mclear\x1b[0m")
+        if (!c) console.log(this.mod_name, "\x1b[32mclear\x1b[0m")
     }
 }
 
