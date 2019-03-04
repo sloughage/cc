@@ -18,9 +18,6 @@ module.exports = new Router()
         }
 
         const tuition_cost = costs.in_state || costs.out_state
-        // const rab_cost = (!("include_rab" in ctx.query)
-        //     || ctx.query.include_rab !== "false")
-        //     && costs.rab
         const rab_cost = ctx.query.include_rab !== "false" && costs.rab
         ctx.body = {cost: tuition_cost + rab_cost}
 

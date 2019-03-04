@@ -1,4 +1,4 @@
-const test = require("./reqTest")
+const test = require("./util/reqTest")
 
 module.exports = null
 

@@ -1,4 +1,4 @@
-const Test = require("./Test")
+const Test = require("./util/Test")
 const getCollegeData = require("../api/database/getCollegeData")
 
 module.exports = new Test("getCollegeData")
@@ -9,6 +9,10 @@ module.exports = new Test("getCollegeData")
 ).aqual(
     "header",
     (async () => await getCollegeData("College")),
+    null
+).aqual(
+    "empty string",
+    (async () => await getCollegeData("")),
     null
 ).aquiv(
     "all three",
@@ -26,4 +30,4 @@ module.exports = new Test("getCollegeData")
     "no rab",
     (async () => await getCollegeData("Goodwin College")),
     {in_state: 20798, out_state: 0, rab: 0}
-)
+).run()
